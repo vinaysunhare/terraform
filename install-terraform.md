@@ -31,3 +31,8 @@ sudo apt-get update && sudo apt-get install -y terraform
 ```bash
 terraform -v
 ```
+# 8. Example output:
+```bash
+Terraform v1.x.x
+on linux_amd64
+```
