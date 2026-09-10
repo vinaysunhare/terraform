@@ -33,6 +33,7 @@ Click **Create group**.
 ```text
 Vinay-terraform-setup
 ```
+<img width="512" height="238" alt="Vinay-terraform-setup" src="https://github.com/user-attachments/assets/5b25ca1c-9e95-4454-892a-2943fd59aa4b" />
 
 Add the following AWS managed policies to the group:
 
@@ -233,18 +234,10 @@ This loads the AWS credentials and region into your current terminal session.
 Instead of running `aws login`, verify the configured IAM credentials with:
 
 ```bash
-aws sts get-caller-identity
+aws login
 ```
+<img width="512" height="178" alt="Verify AWS Authentication" src="https://github.com/user-attachments/assets/d3fef30f-12a6-480e-b778-be4131890d46" />
 
-You should receive output similar to:
-
-```json
-{
-    "UserId": "AIDAXXXXXXXXXXXXXXXX",
-    "Account": "123456789012",
-    "Arn": "arn:aws:iam::123456789012:user/vinay-terraform"
-}
-```
 
 This confirms that AWS CLI is successfully authenticated with your IAM user.
 
@@ -257,6 +250,16 @@ You can also test whether your IAM permissions are working:
 ```bash
 aws iam list-users
 ```
+You should receive output similar to:
+
+```json
+{
+    "UserId": "AIDAXXXXXXXXXXXXXXXX",
+    "Account": "123456789012",
+    "Arn": "arn:aws:iam::123456789012:user/vinay-terraform"
+}
+```
+<img width="512" height="152" alt="aws iam list-users" src="https://github.com/user-attachments/assets/78d4829d-9410-47e5-a55d-44bedd44d0fe" />
 
 If your IAM user has permission to list users, AWS will return the IAM users in your account.
 
